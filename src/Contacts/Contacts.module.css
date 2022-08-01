@@ -1,0 +1,48 @@
+.contactsBlock{
+    background-color: #f5f396;
+    height: 30vh;
+}
+
+.contactsContainer{
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.title{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactsInfo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+/*.contactsInfo input{
+    width: 300px;
+    margin: 8px 0
+}*/
+.contactsInfo textarea, .contactsInfo input{
+    width: 300px;
+    margin: 8px 0
+}
+
+.inputValue{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.submitBtn{
+    padding: 10px 20px;
+    background-color: #eeeef5;
+}

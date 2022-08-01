@@ -1,0 +1,9 @@
+.freelanceBlock{
+    background-color: #f59696;
+    height: 20vh;
+}
+
+.freelanceContainer{
+    display: flex;
+    flex-direction: column;
+}
