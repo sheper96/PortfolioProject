@@ -1,21 +1,21 @@
 import React from 'react';
 import styleContainer from "../common/styles/Container.module.css"
-import styles from './Footer.module.css'
+import styles from './Footer.module.scss'
+import Icon from "./Icon/Icon";
+import {faFacebook, faInstagram, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
     return (
         <div className={styles.footerBlock}>
             <div className={styleContainer.container}>
                 <div className={styles.footer}>
-                    <h1>Lyzhyn Valery</h1>
+                    <h1>Valery Lyzhyn</h1>
                     <div className={styles.socialNetworkPanel}>
-                        <div className={styles.socialNetwork}>1</div>
-                        <div className={styles.socialNetwork}>2</div>
-                        <div className={styles.socialNetwork}>3</div>
-                        <div className={styles.socialNetwork}>4</div>
-
+                        <Icon icon={faFacebook}/>
+                        <Icon icon={faLinkedin}/>
+                        <Icon icon={faInstagram}/>
                     </div>
-                    <span>All rights reserved</span>
+                    <span className={styles.copyright}>All rights reserved ©</span>
                 </div>
 
 

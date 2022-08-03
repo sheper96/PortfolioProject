@@ -1,0 +1,19 @@
+@import "src/common/styles/sass/variables.scss";
+
+
+.freelanceBlock{
+    background-color: $bgColor;
+    height: 40vh;
+    .freelanceContainer{
+        display: flex;
+        flex-direction: column;
+        .hireBtn{
+            background-color: $primaryColor;
+            padding: 15px 30px;
+            position: relative;
+        }
+    }
+}
+
+
+

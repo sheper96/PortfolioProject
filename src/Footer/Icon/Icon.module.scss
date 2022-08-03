@@ -1,0 +1,15 @@
+@import "src/common/styles/sass/variables";
+
+
+.socialIcons{
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon{
+  width: 25px;
+  height: 25px;
+  color: $primaryColor;
+}

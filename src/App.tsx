@@ -9,17 +9,17 @@ import Contacts from "./Contacts/Contacts";
 import Footer from "./Footer/Footer";
 
 function App() {
-  return (
-    <div>
-     < Header/>
-        <Main/>
-        <Skills/>
-        <MyProjects/>
-        <Freelance/>
-        <Contacts/>
-        <Footer/>
-    </div>
-  );
+    return (
+        <div>
+            <Header/>
+            <Main/>
+            <Skills/>
+            <MyProjects/>
+            <Freelance/>
+            <Contacts/>
+            <Footer/>
+        </div>
+    );
 }
 
 export default App;

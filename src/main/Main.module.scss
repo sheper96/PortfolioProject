@@ -1,0 +1,36 @@
+@import "/src/common/styles/sass/variables";
+@import "/src/common/styles/sass/mixins";
+
+
+
+.mainBlock {
+    height: 100vh;
+    background-color: $bgSecondColor;
+}
+
+
+.text{
+    width: 300px;
+}
+
+.photo{
+    width: 400px;
+    height: 500px;
+    background-image: url('../common/assets/image/mainPhoto.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.greeting{
+    @include text($titleFontFamily, 1.2, 500, 20px);
+}
+
+.nameTitle{
+    @include text($titleFontFamily, 1.2, 500, 30px);
+}
+
+.devTitle{
+    @include text($textFontFamily, 1, 300, 20px);
+}
+
