@@ -1,14 +1,16 @@
 import React from 'react';
-import Nav from "./nav/Nav";
+import Nav from "./Nav/Nav";
 import styles from "./Header.module.scss"
+import BurgerNav from "./BurgerNav/BurgerNav";
 
 
 
 function Header() {
     return (
-        <div className={styles.header}>
+        <header className={styles.header}>
             <Nav/>
-        </div>
+            <BurgerNav/>
+        </header>
     );
 }
 

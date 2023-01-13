@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from "./ProjectItem.module.scss"
+import {Button} from "../../common/components/button/Button";
 
 
 type ProjectItemPropsType = {
@@ -12,7 +13,7 @@ function ProjectItem(props: ProjectItemPropsType) {
     return (
         <div className={styles.projects}>
             <div style={props.style} className={styles.image} >
-                <a href='#' className={styles.viewBtn}>Watch</a>
+                <Button text={"Watch"}/>
             </div>
             <div className={styles.projectInfo}>
             <h3 className={styles.projectTitle}>{props.projectTitle}</h3>

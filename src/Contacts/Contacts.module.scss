@@ -1,46 +1,62 @@
 @import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
 
-.contactsBlock{
-    background-color: $bgSecondColor;
-    height: 50vh;
+.contactsBlock {
+  background-color: $bgSecondColor;
+  height: 0;
+  min-height: 50vh;
+  width: 100%;
+
+  .form {
+    .btnSection{
+      display: flex;
+      justify-content: center;
+      .formBtn {
+        background-color: $primaryColor;
+        cursor: pointer;
+        @include text($TextFontFamily, 18px, 1.5, 400);
+        padding: 15px 30px;
+        width: 40%;
+        @media screen and (max-width: 450px) {
+          @include text($TextFontFamily, 14px, 1.5, 400);
+          padding: 5px 25px;
+        }
+        &:hover{
+          color: #1f1f20;
+        }
+        .contactsField{
+          width: 100%;
+        }
+    }
+
+    }
+
+
+    .formArea,
+    .messageArea {
+      background: $bgSecondColor;
+      width: 100%;
+      border: 1px solid #4a4a4a;
+      box-sizing: border-box;
+      @include text(inherit, 12px, 1.5, 400);
+      outline: none;
+      color: #5d656e;
+      margin-bottom: 1.2rem;
+
+      &:-webkit-autofill {
+        border: 1px solid #4a4a4a;
+        -webkit-text-fill-color: #495057;
+        -webkit-box-shadow: 0 0 0 1000px #252527 inset;
+        transition: background-color 5000s ease-in-out 0s;
+
+        &:focus {
+          border: 2px solid $bgSecondColor
+        }
+      }
+
+    }
+  }
 }
 
-.contactsContainer{
-    flex-direction: column;
-    justify-content: flex-start;
 
-}
 
-.title{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.contactsInfo{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-}
-
-.contactsInfo textarea, .contactsInfo input{
-    width: 300px;
-    margin: 8px 0
-}
-
-.inputValue{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin: 50px 0 ;
-}
-
-.submitBtn{
-    background-color: $primaryColor;
-    padding: 15px 30px;
-    position: relative;
-    margin-top: 20px;
-}

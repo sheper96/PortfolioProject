@@ -1,0 +1,32 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  margin: 0 30px;
+  position: absolute;
+  @include text($TitleFontFamily, 18px, 1.2, 500);
+  letter-spacing: 1px;
+  a {
+    text-decoration: none;
+    @include text($TitleFontFamily, 18px, 1.2, 500);
+    color: $textColor;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: none;
+      color: $primaryColor;
+    }
+    @media screen and (max-width: 850px) {
+      display: none;
+    }
+
+  }
+}
+
+
+
+

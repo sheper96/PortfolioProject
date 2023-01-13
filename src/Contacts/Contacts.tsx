@@ -1,23 +1,30 @@
 import React from 'react';
-import styleContainer from "../common/styles/Container.module.css"
+import styleContainer from "../common/styles/Container.module.scss"
 import styles from './Contacts.module.scss'
 import Title from "../common/components/title/Title";
+import {Fade} from "react-awesome-reveal";
 
 function Contacts() {
     return (
-        <div className={styles.contactsBlock}>
-            <div className={`${styleContainer.container} ${styles.contactsContainer}`}>
-                <div className={styles.title}>
-                    <Title text={"Contacts"}/>
+        <div id='contacts' className={styles.contactsBlock}>
+            <div className={styleContainer.container}>
+                <Fade delay={100} duration={1500} direction={'down'} triggerOnce>
+                    <div >
+                        <Title text={"Contacts"}/>
+                    </div>
+                </Fade>
+                <Fade delay={100} duration={1500} triggerOnce>
+                <div className={styles.form}>
+                    <form className={styles.contactsField}>
+                        <input type="text" className={styles.formArea} placeholder={"Name"}/>
+                        <input type="text" className={styles.formArea} placeholder={"e-mail"}/>
+                        <textarea name="" id="" className={styles.messageArea} placeholder={"Message"}/>
+                        <div className={styles.btnSection}>
+                        <button className={styles.formBtn} type="submit">Send</button>
+                        </div>
+                    </form>
                 </div>
-                <div className={styles.contactsInfo}>
-                        <form className={styles.inputValue}>
-                    <input type="text"/>
-                    <input type="text"/>
-                    <textarea name="" id="" ></textarea>
-                            <button type="submit" className={styles.submitBtn}>Send</button>
-                        </form>
-                </div>
+                </Fade>
             </div>
         </div>
     );

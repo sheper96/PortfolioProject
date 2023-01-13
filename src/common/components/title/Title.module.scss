@@ -1,17 +1,23 @@
 @import "src/common/styles/sass/variables";
+@import "/src/common/styles/sass/mixins";
 
 .title {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 50px 0 30px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 36px;
-    line-height: 1.2;
+    @include text($TitleFontFamily, 36px, 1.2 , 500);
     letter-spacing: 2px;
     color: $textColor;
     text-transform: capitalize;
     position: relative;
+    @media screen and (max-width: 840px) {
+        @include text($TitleFontFamily, 28px, 1.2 , 500);
+    }
+    @media screen and (max-width: 450px) {
+        @include text($TitleFontFamily, 20px, 1.2 , 500);
+
+    }
     &::before {
         content: "";
         position: absolute;

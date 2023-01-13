@@ -1,18 +1,30 @@
 @import "src/common/styles/sass/variables.scss";
+@import "src/common/styles/sass/mixins";
 
 
 .freelanceBlock{
     background-color: $bgColor;
-    height: 40vh;
-    .freelanceContainer{
-        display: flex;
-        flex-direction: column;
+    height: 0;
+    min-height: 40vh;
+    width: 100%;
+
         .hireBtn{
             background-color: $primaryColor;
-            padding: 15px 30px;
+            padding: 15px 50px;
+            @media screen and (max-width: 370px) {
+                @include text($TextFontFamily, 14px, 1.5, 400);
+                padding: 5px 25px;
+            }
             position: relative;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            @include text($TextFontFamily, 18px, 1.5, 400);
+            &:hover{
+                color: #1f1f20;
+            }
         }
-    }
+
 }
 
 

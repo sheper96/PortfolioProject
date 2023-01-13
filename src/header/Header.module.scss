@@ -2,13 +2,14 @@
 @import "src/common/styles/sass/mixins";
 
 
-.header{
-    height: 100px;
-    background-color: $bgColor;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 0 auto;
-
+.header {
+  border: 3px solid #1f1f20;
+  height: 80px;
+  width: 100%;
+  background-color: $bgColor;
+  @include flex(row, flex-end, center, nowrap);
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  right: 0;
 }

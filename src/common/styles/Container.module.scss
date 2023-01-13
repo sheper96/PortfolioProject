@@ -1,0 +1,8 @@
+@import "./sass/mixins";
+
+.container {
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    @include flex(column, space-around, center, wrap);
+}
