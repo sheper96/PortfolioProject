@@ -3,12 +3,13 @@
 
 .contactsBlock {
   background-color: $bgSecondColor;
-  height: 0;
-  min-height: 50vh;
+  min-height: 45vh;
   width: 100%;
 
   .form {
+    margin-top: 50px;
     .btnSection{
+      margin-bottom: 20px;
       display: flex;
       justify-content: center;
       .formBtn {

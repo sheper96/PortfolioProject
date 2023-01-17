@@ -4,17 +4,20 @@
 
 .freelanceBlock{
     background-color: $bgColor;
-    height: 0;
-    min-height: 40vh;
+    min-height: 30vh;
     width: 100%;
-
+    .hire{
+        margin-top: 40px;
+        margin-bottom: 20px;
+        height: 100%;
         .hireBtn{
             background-color: $primaryColor;
             padding: 15px 50px;
-            @media screen and (max-width: 370px) {
+            @media screen and (max-width: 450px) {
                 @include text($TextFontFamily, 14px, 1.5, 400);
                 padding: 5px 25px;
             }
+
             position: relative;
             cursor: pointer;
             text-decoration: none;
@@ -24,6 +27,9 @@
                 color: #1f1f20;
             }
         }
+
+    }
+
 
 }
 

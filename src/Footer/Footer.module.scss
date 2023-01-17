@@ -4,38 +4,49 @@
 
 .footerBlock{
     background-color: $bgColor;
-    height: 0;
-    min-height: 30vh;
-}
-
-.footer{
-    width: 70%;
-    display: flex;
+    min-height: 15vh;
+    .footer{
+        width: 100%;
+        display: flex;
         justify-content: center;
-    & h1{
-        @include text( $TitleFontFamily,36px ,1.2,300);
-        letter-spacing: 2px;
+        align-items: center;
+        & h1{
+            @include text( $TitleFontFamily,36px ,1.2,300);
+            letter-spacing: 2px;
+            @media screen and (max-width: 925px) {
+                @include text($TitleFontFamily, 28px, 1.2 , 300);
+            }
+            @media screen and (max-width: 450px) {
+                @include text($TitleFontFamily, 20px, 1.2 , 300);
 
+            }
+
+        }
     }
+    .socialNetworkPanel{
+        width: 25%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @media screen and (max-width: 980px) {
+            width: 35%;;
+        }
+        @media screen and (max-width: 550px) {
+            width: 55%;;
+        }
+    }
+
+    .copyright{
+        @include text( $TextFontFamily,12px,1.2,300);
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+
+
 }
 
-.socialNetworkPanel{
-    width: 25%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    @media screen and (max-width: 980px) {
-        width: 35%;;
-    }
-    @media screen and (max-width: 550px) {
-        width: 55%;;
-    }
-}
 
 
 
-.copyright{
-    @include text( $TextFontFamily,14px,1.2,300);
-    margin-top: 20px;
-}
 

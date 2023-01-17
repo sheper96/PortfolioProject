@@ -13,7 +13,7 @@ function ProjectItem(props: ProjectItemPropsType) {
     return (
         <div className={styles.projects}>
             <div style={props.style} className={styles.image} >
-                <Button text={"Watch"}/>
+                <Button text={"Watch"} link={'https://cards-nya-front1.vercel.app/'}/>
             </div>
             <div className={styles.projectInfo}>
             <h3 className={styles.projectTitle}>{props.projectTitle}</h3>

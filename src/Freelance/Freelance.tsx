@@ -11,9 +11,12 @@ function Freelance() {
             <div className={styleContainer.container}>
             <Fade delay={100} duration={1500}  direction={'down'} triggerOnce>
                     <Title text={"I Am Available For Freelance"} />
+                <div className={styles.hire}>
                 <Link className={styles.hireBtn} to="contacts" spy={true} smooth={true} offset={-100} duration={500} >
                    Hire Me
                 </Link>
+                </div>
+
             </Fade>
             </div>
         </div>

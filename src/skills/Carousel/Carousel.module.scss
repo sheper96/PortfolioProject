@@ -1,0 +1,24 @@
+@import "src/common/styles/sass/variables";
+@import "/src/common/styles/sass/mixins";
+
+
+.mainContainer{
+  height: 150px;
+  width: 450px;
+}
+
+.window{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.allItemsContainer{
+  height: 100%;
+  display: flex;
+  transition: translate;
+}
+
+.arrow{
+  cursor: pointer;
+}

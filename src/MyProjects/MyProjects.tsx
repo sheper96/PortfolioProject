@@ -20,10 +20,14 @@ function MyProjects() {
                     <Title text={'My Projects'}/>
                 </Fade>
                 <div className={styles.projects}>
-                    <Fade delay={100} duration={1500} triggerOnce>
+                    <div className={styles.projectItem}>
+                    <Fade delay={100} duration={1500} triggerOnce >
+
                         <ProjectItem style={social} projectTitle={'Todo List'}
                                      projectDescription={'The React.js framework is an open-source JavaScript framework and library developed by Facebook. It’s used for building interactive user interfaces and web applications quickly and efficiently with significantly less code than you would with vanilla JavaScript.'}/>
-                    </Fade>
+
+                        </Fade>
+                    </div>
                 </div>
             </div>
         </div>

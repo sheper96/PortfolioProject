@@ -2,10 +2,11 @@ import styles from './Button.module.scss'
 
 type ButtonPropsType = {
     text:string
+    link:string
 }
 
 export function Button(props:ButtonPropsType){
     return(
-        <a href={""} className={styles.btn}>{props.text}</a>
+        <a href={props.link} className={styles.btn}>{props.text}</a>
     );
 }

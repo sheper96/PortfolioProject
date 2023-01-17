@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.module.scss';
 import Header from "./header/Header";
 import Main from "./main/Main";
@@ -10,11 +10,21 @@ import Footer from "./Footer/Footer";
 
 
 function App() {
+    const [windowDimension, setWindowDimension] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => setWindowDimension(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
+    }, [])
+    const isMobile = windowDimension <= 1050
     return (
         <div>
             <Header/>
             <Main/>
-            <Skills/>
+            <Skills isMobile={isMobile}  />
             <MyProjects/>
             <Freelance/>
             <Contacts/>

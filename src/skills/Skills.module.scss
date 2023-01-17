@@ -3,16 +3,32 @@
 
 
 .skillBlock{
-        height: 70vh;
+        min-height: 60vh;
         background-color: $bgColor;
+
     @include flex(column, space-between, center, nowrap);
-    .skills{
+    .swiper{
         width: 100%;
-        @include flex(row, space-between, center, nowrap);
-        @media screen and (max-width: 1005px) {
-            @include flex(column, center, center, nowrap);
-            height: 0;
+        .mySwiper{
+            width: 100%;
+            .swiperSlide{
+                margin-top: 50px;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
         }
     }
 
+    .skills{
+        width: 100%;
+        margin-top: 50px;
+        @include flex(row, space-between, center, nowrap);
+
+    }
+
 }
+

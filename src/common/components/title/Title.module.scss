@@ -11,7 +11,7 @@
     color: $textColor;
     text-transform: capitalize;
     position: relative;
-    @media screen and (max-width: 840px) {
+    @media screen and (max-width: 925px) {
         @include text($TitleFontFamily, 28px, 1.2 , 500);
     }
     @media screen and (max-width: 450px) {
@@ -29,6 +29,7 @@
     & h2 {
         margin: 0;
         font-weight: 300;
+        text-align: center;
     }
 
 
